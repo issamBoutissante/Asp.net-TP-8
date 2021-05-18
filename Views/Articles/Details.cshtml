@@ -1,0 +1,58 @@
+﻿@model Asp.net_MVC_TP_8_EF.Models.Article
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Article</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Desig_Art)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desig_Art)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_Art)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_Art)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QttEnStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QttEnStock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeuilMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeuilMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeuilMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeuilMax)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Num_Art }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

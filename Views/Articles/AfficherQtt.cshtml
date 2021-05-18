@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "AfficherQtt";
+}
+
+<form method="post" action="AfficherQtt">
+    <table>
+        <tr>
+            <td><label for="Num_Art">Num Article</label></td>
+            <td><input type="text" name="Num_Art" /></td>
+        </tr>
+        @if (ViewBag.Qtt != null)
+        {
+            <tr>
+                <td><label>Qauntite</label></td>
+                <td><h3>@ViewBag.Qtt</h3></td>
+            </tr>
+            
+        }
+        <tr>
+            <td/>
+            <td><input type="submit" value="Get Quantite" /></td>
+        </tr>
+    </table>
+    
+</form>

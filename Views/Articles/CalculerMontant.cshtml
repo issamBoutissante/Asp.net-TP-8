@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "CalculerMontant";
+}
+
+<form method="post" action="CalculerMontant">
+    <table>
+        <tr>
+            <td><label for="Num_Art">Num Article</label></td>
+            <td><input type="text" name="Num_Art" /></td>
+        </tr>
+        <tr>
+            <td><label for="QttEnStock">Quantite</label></td>
+            <td><input type="text" name="QttEnStock" /></td>
+        </tr>
+        @if (ViewBag.Montant != null)
+        {
+            <tr>
+                <td><label>Montant</label></td>
+                <td><h3>@ViewBag.Montant</h3></td>
+            </tr>
+        }
+        <tr>
+            <td />
+            <td><input type="submit" value="Calculer Montant" /></td>
+        </tr>
+    </table>
+</form>
+
+

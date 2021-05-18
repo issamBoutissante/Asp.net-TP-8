@@ -1,0 +1,64 @@
+﻿@model Asp.net_MVC_TP_8_EF.Models.Article
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Article</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Desig_Art)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desig_Art)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_Art)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_Art)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QttEnStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QttEnStock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeuilMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeuilMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeuilMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeuilMax)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AfficherLeSeuil";
+}
+
+<form method="post" action="AfficherLeSeuil">
+    <table>
+        <tr>
+            <td>
+                <label for="Num_Art">Num Article</label>
+            </td>
+            <td>
+                <input type="text" name="Num_Art" />
+            </td>
+        </tr>
+        @if (ViewBag.sMin != null)
+        {
+            <tr>
+                <td><label>Seuil Min</label></td>
+                <td><h3>@ViewBag.sMin</h3></td>
+            </tr>
+            <tr>
+                <td><label>Seuil Max</label></td>
+                <td><h3>@ViewBag.sMax</h3></td>
+            </tr>
+        }
+        <tr>
+            <td/>
+            <td> <input type="submit" value="Affiche Seuil" /></td>
+        </tr>
+    </table>
+</form>
+
